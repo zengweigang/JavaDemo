@@ -10,6 +10,6 @@ import java.util.UUID;
 public class TradeEventHandler2 implements EventHandler<TradeEvent>{
     @Override
     public void onEvent(TradeEvent event, long sequence, boolean endOfBatch) throws Exception {
-        System.out.print("记录日志："+event.toString());
+        System.out.println("记录日志："+event.toString()+Thread.currentThread().getName());
     }
 }

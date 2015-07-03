@@ -8,7 +8,6 @@ import com.lmax.disruptor.EventHandler;
 public class TradeEventHandler4 implements EventHandler<TradeEvent>{
     @Override
     public void onEvent(TradeEvent event, long sequence, boolean endOfBatch) throws Exception {
-        System.out.print("我负责发布交易情况：" + event.toString());
-        System.out.println("");
+        System.out.println("我负责发布交易情况：" + event.toString()+Thread.currentThread().getName());
     }
 }

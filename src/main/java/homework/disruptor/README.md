@@ -3,4 +3,5 @@
 https://github.com/LMAX-Exchange/disruptor/wiki/Getting-Started
 
 包b:
-自己模拟一个交易场景
+模拟转账交易
+![](https://github.com/zengweigang/JavaDemo/blob/master/src/main/java/homework/disruptor/b/flow.png?raw=true)

@@ -11,6 +11,6 @@ public class TradeEventHandler1 implements EventHandler<TradeEvent>{
     @Override
     public void onEvent(TradeEvent event, long sequence, boolean endOfBatch) throws Exception {
         event.setUid(UUID.randomUUID().toString());
-        System.out.print("编号："+event.toString());
+        System.out.println("编号："+event.toString()+Thread.currentThread().getName());
     }
 }
