@@ -10,6 +10,7 @@ https://github.com/LMAX-Exchange/disruptor/wiki/Getting-Started
 学习资料汇集：  
 
 一种高效无锁内存队列的实现:http://note.youdao.com/share/?id=9b5c21b5b9cf58b95311fdc0604416a9&type=note  
+Disruptor核心类和接口 http://note.youdao.com/share/?id=647946f2432e6c38ca584119194b9f73&type=note  
 
 http://ifeve.com/disruptor/
 http://ifeve.com/disruptor-getting-started/
