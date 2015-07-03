@@ -24,7 +24,7 @@ public class TradeMain {
         TradeEventProducer tradeEventProducer = new TradeEventProducer(disruptor.getRingBuffer());
 
         for (long l = 0; l<2; l++) {
-            tradeEventProducer.publishTrade("zengweigang" + l, "sheya" + l);
+            tradeEventProducer.publishTrade("zengweigang" + l, "zhangsan" + l);
         }
         disruptor.shutdown();
     }
