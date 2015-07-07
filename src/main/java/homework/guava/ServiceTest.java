@@ -2,6 +2,7 @@ package homework.guava;
 
 import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.AbstractScheduledService;
+import com.google.common.util.concurrent.ServiceManager;
 import javafx.concurrent.Service;
 import javafx.concurrent.Worker;
 import junit.framework.TestCase;
@@ -53,5 +54,6 @@ public class ServiceTest {
         };
         service.startAsync().awaitRunning();
         service.stopAsync().awaitTerminated();
+
     }
 }
