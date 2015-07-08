@@ -59,6 +59,10 @@ public class EventBusTest extends TestCase {
                System.out.printf("%s from long%n", integer);
            }
            @Subscribe
+           public void lister(Trade trade) {
+               System.out.printf("%s from Trade%n", trade.getId()+"-"+trade.getName());
+           }
+           @Subscribe
            public void lister(DeadEvent event) {
                System.out.printf("%s=%s from dead events%n", event.getSource().getClass(), event.getEvent());
            }
@@ -68,6 +72,32 @@ public class EventBusTest extends TestCase {
         eventBus.post(2);
         eventBus.post(1L);
         eventBus.post("s");
+        Trade trade = new Trade("t1","Q币");
+        eventBus.post(trade);
+    }
+private class Trade{
+        private String id;
+        private String  name;
+
+    public String getId() {
+        return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private Trade(String id, String name) {
+            this.id = id;
+            this.name = name;
+        }
+}
 }
